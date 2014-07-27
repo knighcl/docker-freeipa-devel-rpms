@@ -5,7 +5,7 @@ MAINTAINER Curtis L. Knight
 RUN yum -y update && yum clean all
 
 # install git and rpm build tools
-RUN yum --enablerepo=updates-testing -y install git yum-utils make rpmdevtools rpmlint cpp pylint
+RUN yum -y install git yum-utils make rpmdevtools rpmlint cpp pylint
 
 ADD freeipa-devel-rpm-build /usr/sbin/freeipa-devel-rpm-build
 RUN chmod -v +x /usr/sbin/freeipa-devel-rpm-build
