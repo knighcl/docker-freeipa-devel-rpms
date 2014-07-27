@@ -1,0 +1,41 @@
+
+# FreeIPA project RPM Build
+
+This repository contains the Dockerfile and associated files to
+generate rpms from the official FreeIPA git repository. When running
+the container, any branch/tag can be used.
+
+To build the image, run in the root of the repository:
+
+    docker build -t freeipa-devel-rpms .
+
+* * * * * *
+Unable to currently build any rpms from any branch/tag at this time
+1. pylint - runtime error
+2. pylint - missing files error
+3. without pylint activated - missing files error
+* * * * * *
+
+To run the container from git master:
+
+    docker run -ti --name freeipa-devel-rpms-container freeipa-devel-rpms
+
+To run the container from git branch release-4-0-1:
+
+    docker run -ti --name freeipa-devel-rpms-container freeipa-devel-rpms release-4-0-1
+
+
+
+# Copyright 2014 Curtis L. Knight
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
