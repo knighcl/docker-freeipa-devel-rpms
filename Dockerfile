@@ -1,4 +1,4 @@
-FROM fedora:20
+FROM fedora:rawhide
 MAINTAINER Curtis L. Knight
 
 # update base image
